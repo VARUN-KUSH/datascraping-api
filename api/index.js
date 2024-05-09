@@ -1,8 +1,5 @@
 import express from "express"
-import dotenv from "dotenv"
-dotenv.config({
-    path: './.env'
-})
+
 
 const PORT = 9000;
 
@@ -22,8 +19,8 @@ import homeRouter from '../routes/home.routes.js'
 
 app.use("/api/v1/home", homeRouter)
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`⚙️ Server is running at port : ${process.env.PORT || PORT}`);
+app.listen(PORT, () => {
+    console.log(`⚙️ Server is running at port : ${ PORT}`);
 })
 
 // http://localhost:8000/api/v1/home/
